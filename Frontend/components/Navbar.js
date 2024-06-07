@@ -22,16 +22,16 @@ const Navbar = () => {
   };
   const menuItems = [
     {
+      href: "/",
+      title: "School",
+    },
+    {
       href: "/parents",
       title: "Parents",
     },
     {
       href: "/educators",
       title: "Educators",
-    },
-    {
-      href: "/school",
-      title: "School",
     },
   ];
 
