@@ -22,16 +22,16 @@ const Navbar = () => {
   };
   const menuItems = [
     {
-      href: "/",
-      title: "Home",
+      href: "/parents",
+      title: "Parents",
     },
     {
-      href: "/events",
-      title: "Events",
+      href: "/educators",
+      title: "Educators",
     },
     {
-      href: "/about",
-      title: "About Us",
+      href: "/school",
+      title: "School",
     },
   ];
 
@@ -51,12 +51,11 @@ const Navbar = () => {
 
   return (
     <nav
-      ref={navRef}
-      className={`flex p-1 text-black justify-around items-center flex-col sm:flex-row gap-4 md:gap-12 box_shadow body_color ${
+      className={`flex p-2 text-black justify-between items-center flex-col sm:flex-row gap-4 md:p-0 md:gap-12 box_shadow body_color ${
         visible ? "sticky top-0 z-50 transition-all duration-300" : "-top-24"
       }`}
     >
-      <div className="flex justify-between w-full sm:w-auto items-center">
+      <div className="flex justify-between w-full sm:w-auto items-center ">
         <Link href="/">
           <Image src={HouseLogo} alt="logo" height={50} width={130} />
         </Link>
@@ -74,7 +73,7 @@ const Navbar = () => {
         )}
       </div>
       {/* Desktop Navbar */}
-      <div className="hidden sm:flex gap-5 flex-col items-center sm:flex-row sm:gap-4 md:gap-4 lg:gap-1  ">
+      <div className="hidden sm:flex gap-5 flex-col items-center sm:flex-row sm:gap-4 md:gap-4 lg:gap-1` sm:mx-20 ">
         {menuItems.map(({ href, title }) => (
           <span key={title} className="group relative">
             <Link
@@ -91,7 +90,7 @@ const Navbar = () => {
       {/* Mobile Crumbread */}
       {isBread && (
         <div className="sm:hidden">
-          <div className="flex gap-5 flex-col items-center sm:flex-row">
+          <div className="flex p-3 gap-5 flex-col items-center sm:flex-row">
             {menuItems.map(({ href, title }) => (
               <span key={title} className="group relative">
                 <Link
@@ -107,7 +106,7 @@ const Navbar = () => {
         </div>
       )}
       {/* Donate Now Button */}
-      <div className="flex justify-center sm:block">
+      {/* <div className="flex justify-center sm:block">
         <button
           onClick={handleOpenModal}
           className={`
@@ -123,7 +122,7 @@ const Navbar = () => {
           <FiHeart />
           <span className="font-bold">Donate Now</span>
         </button>
-      </div>
+      </div> */}
       <DonateModal isOpen={isModalOpen} handleClose={handleCloseModal} />
     </nav>
   );

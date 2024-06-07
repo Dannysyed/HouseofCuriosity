@@ -62,7 +62,7 @@ const HomePage = () => {
               <h1 className="text-4xl font-bold mb-4">
                 Welcome to Houdse of Curiosity
               </h1>
-              <p className="text-lg mb-6 cursive">
+              <p className="text-lg mb-6 ">
                 A space where children create, innovate and solve real world
                 problems
               </p>
